@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "form. AI Creation Studio",
+  "version": "1.0.0",
+  "description": "A multilingual AI workspace for generating websites, apps, software, games, videos, images, posters, thumbnails, and digital assets.",
+  "brand": {
+    "name": "form.",
+    "theme": "light",
+    "colors": {
+      "background": "#f8f7fa",
+      "surface": "#ffffff",
+      "text": "#292733",
+      "muted": "#777480",
+      "accent": "#7658d2",
+      "border": "#ecebf0",
+      "success": "#39a783"
+    },
+    "fonts": ["Inter", "system-ui", "sans-serif"]
+  },
+  "navigation": [
+    { "id": "create", "label": "Create new", "icon": "plus" },
+    { "id": "discover", "label": "Discover", "icon": "search" },
+    { "id": "admin", "label": "Admin console", "icon": "dashboard" }
+  ],
+  "creationTypes": [
+    { "id": "website", "label": "Website", "output": "html" },
+    { "id": "app", "label": "App", "output": "html" },
+    { "id": "software", "label": "Software", "output": "html" },
+    { "id": "game", "label": "Game", "output": "html" },
+    { "id": "video", "label": "Video", "output": "video", "supportsAspectRatio": true },
+    { "id": "image", "label": "Image", "output": "image", "supportsCustomDimensions": true },
+    { "id": "poster", "label": "Poster", "output": "image", "supportsCustomDimensions": true },
+    { "id": "thumbnail", "label": "Thumbnail", "output": "image", "supportsCustomDimensions": true },
+    { "id": "asset", "label": "Asset", "output": "image", "supportsCustomDimensions": true }
+  ],
+  "imageLimits": {
+    "minimumDimension": 256,
+    "maximumDimension": 4096,
+    "maximumPixels": 8000000
+  },
+  "preview": {
+    "sandboxed": true,
+    "shareable": true,
+    "viewports": ["desktop", "tablet", "mobile"]
+  },
+  "downloads": {
+    "generatedWebsite": "index.html",
+    "sourceBundle": "creation-studio.zip",
+    "jsonBundle": "json-files.zip"
+  },
+  "admin": {
+    "enabled": true,
+    "demoOnly": true,
+    "authenticationRequiredForProduction": true,
+    "persistentStorageRequiredForProduction": true
+  }
+}

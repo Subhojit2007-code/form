@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f7fa" />
+  <meta name="description" content="An AI creation studio for websites, apps, games, images, posters, and video." />
+  <title>form. — AI creation studio</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="shell" id="studioShell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="form. home"><span class="brand-icon" aria-hidden="true">✳</span><span>form<span class="brand-dot">.</span></span></a>
+      <nav class="mobile-nav" aria-label="Mobile navigation"><button class="side-link active" type="button" data-view="create">＋ Create</button><button class="side-link" type="button" data-view="admin">▦ Admin</button></nav>
+      <button class="workspace" type="button"><span class="workspace-avatar">S</span><span><strong>Studio workspace</strong><small>Free workspace</small></span><span class="chevron">⌄</span></button>
+      <p class="section-label">WORKSPACE</p>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="side-link active" type="button" data-view="create"><span>＋</span>Create new <kbd>⌘ K</kbd></button>
+        <button class="side-link" type="button" data-view="discover"><span>⌕</span>Discover</button>
+      </nav>
+      <p class="section-label recent-label">RECENT PROJECTS <span>＋</span></p>
+      <div class="projects"><button class="project selected" type="button"><i class="dot violet"></i><span id="projectName">Untitled website</span></button><button class="project" type="button"><i class="dot orange"></i>Habit tracker app</button><button class="project" type="button"><i class="dot blue"></i>Little planet game</button></div>
+      <div class="side-bottom">
+        <button class="side-link" type="button" data-view="admin"><span>▦</span>Admin console</button>
+        <a class="side-link download-side" href="./project-source.zip" download><span>↓</span>Download project source</a>
+        <button class="side-link" type="button" data-toast="Settings are coming soon."><span>⚙</span>Settings</button>
+        <div class="profile"><span class="profile-avatar">JD</span><span><strong>Jordan Davis</strong><small>Personal workspace</small></span><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div class="crumb"><span>Workspace</span><b>/</b><strong id="breadcrumb">Untitled website</strong></div><div class="top-actions"><span class="gateway"><i></i>Gateway connected</span><a class="download-button" href="./creation-studio.zip" download>↓ <span>HTML/CSS/JS</span></a><a class="download-button" href="./project-source.zip" download>↓ <span>Project source</span></a><span class="profile-avatar small">JD</span></div></header>
+      <section class="workspace-view" id="createView">
+        <div class="welcome"><div><p class="eyebrow"><span>✳</span> YOUR CREATIVE WORKSPACE</p><h1>What will you make today?</h1><p class="subhead">One brief. A world of possibilities.</p></div><button class="quiet-button" type="button" data-toast="Your work is available in this session.">••• <span>More</span></button></div>
+        <section class="composer" aria-label="Create with AI"><div class="tabs" role="tablist" aria-label="Creation type">
+          <button class="tab active" role="tab" aria-selected="true" data-type="website">▧ <span>Website</span></button><button class="tab" role="tab" aria-selected="false" data-type="app">✳ <span>App</span></button><button class="tab" role="tab" aria-selected="false" data-type="software">⌘ <span>Software</span></button><button class="tab" role="tab" aria-selected="false" data-type="game">▷ <span>Game</span></button><button class="tab" role="tab" aria-selected="false" data-type="video">▣ <span>Video</span></button><button class="tab" role="tab" aria-selected="false" data-type="image">▧ <span>Image</span></button><button class="tab" role="tab" aria-selected="false" data-type="poster">▤ <span>Poster</span></button><button class="tab" role="tab" aria-selected="false" data-type="thumbnail">◉ <span>Thumbnail</span></button><button class="tab" role="tab" aria-selected="false" data-type="asset">✦ <span>Asset</span></button>
+        </div>
+          <label class="sr-only" for="prompt">Describe what you want to create</label><textarea id="prompt" maxlength="8000" placeholder="Describe the website you want to create…"></textarea>
+          <div class="composer-bottom"><div class="options"><span class="language">文</span><span>Multilingual</span><label class="size-field" id="sizeField" hidden>Size <input id="imageWidth" type="number" min="256" max="4096" value="1536" aria-label="Image width in pixels" /><span>×</span><input id="imageHeight" type="number" min="256" max="4096" value="1024" aria-label="Image height in pixels" /> px</label><label class="ratio-field" id="ratioField" hidden>▣ <select id="aspectRatio" aria-label="Video aspect ratio"><option>16:9</option><option>1:1</option><option>9:16</option><option>4:3</option><option>3:2</option></select></label></div><div class="submit-area"><span id="promptCount">⌘ ↵ to generate</span><button class="generate" id="generateButton" type="button"><span>✳</span> Generate <b>↗</b></button></div></div>
+        </section>
+        <div class="suggestions"><span>Try one of these</span><button type="button" class="suggestion">A landing page for a boutique architecture studio <span>↗</span></button><button type="button" class="suggestion">A cozy pixel-art game about restoring a lighthouse <span>↗</span></button><button type="button" class="suggestion">A cinematic product launch video for a new fragrance <span>↗</span></button></div>
+        <section class="studio-card" aria-label="Generated project workspace"><div class="studio-toolbar"><div class="toolbar-tabs"><button class="toolbar-tab active" data-panel="preview">◉ <span>Preview</span></button><button class="toolbar-tab" data-panel="code">‹› <span>Code</span></button></div><span class="project-title"><i class="dot violet"></i><span id="toolbarProject">Studio Lune — Objects for slower living</span><span class="live-badge"><i></i> Live</span></span><div class="toolbar-actions"><button id="copyLink" class="icon-button" type="button" title="Copy share link" aria-label="Copy share link">↗</button><button id="downloadCode" class="icon-button" type="button" title="Download generated output" aria-label="Download generated output">↓</button><button class="icon-button" type="button" data-toast="More preview options">•••</button></div></div>
+          <div class="preview-tools"><div><button class="device active" data-width="100%" aria-label="Desktop preview">▣</button><button class="device" data-width="820px" aria-label="Tablet preview">▤</button><button class="device" data-width="390px" aria-label="Mobile preview">▯</button><span class="preview-url"><i></i> form.studio / preview</span></div><button class="open-preview" id="openPreview" type="button">↗ <span>Open in browser</span></button></div>
+          <div class="output-grid"><div class="code-pane"><div class="pane-heading"><span>index.html</span><span>HTML <button id="copyCode" type="button" aria-label="Copy code">▢</button></span></div><pre><code id="codeOutput"></code></pre></div><div class="render-pane"><iframe id="previewFrame" title="Generated website preview" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe><div id="mediaOutput" class="media-output" hidden></div></div></div>
+          <div class="studio-foot"><span><i>✓</i> Your output is ready for review.</span><span>Preview runs in an isolated sandbox.</span></div>
+        </section>
+        <footer class="page-foot"><span>Made with form<span class="brand-dot">.</span></span><span>Review generated work before publishing.</span></footer>
+      </section>
+      <section class="admin-view" id="adminView" hidden><div class="admin-heading"><div><p class="eyebrow">WORKSPACE OVERVIEW</p><h1>Admin console</h1><p class="subhead">Usage and generation activity for this browser session.</p></div><button class="download-button" type="button" data-view="create">← Back to studio</button></div><div class="stats"><article><span>Generations this session</span><strong id="statRuns">0</strong><small>Counts reset when this tab closes</small></article><article><span>Successful outputs</span><strong id="statSuccess">0</strong><small>Based on this session only</small></article><article><span>Current plan</span><strong>Free</strong><small>AI Gateway billing may apply</small></article></div><article class="activity"><div><h2>Recent activity</h2><span>SESSION ONLY</span></div><div id="activityRows" class="activity-empty">Your generation history will appear here.</div></article><div class="source-files" aria-label="Download source files"><a href="./index.html" download>↓ index.html</a><a href="./styles.css" download>↓ styles.css</a><a href="./app.js" download>↓ app.js</a><a href="./creation-studio.zip" download>↓ HTML/CSS/JS (.zip)</a><a href="./project-source.zip" download>↓ Next.js source (.zip)</a><a href="./json-files.zip" download>↓ JSON files (.zip)</a><a href="./json/site-config.json" download>↓ site-config.json</a><a href="./json/site-content.json" download>↓ site-content.json</a><a href="./json/package.json" download>↓ package.json</a></div><p class="admin-note">This sample admin panel is not protected by authentication and does not store data. Add authorization and a database before using it for real accounts.</p></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <section class="shared-screen" id="sharedScreen" hidden><header><a class="brand" href="./index.html"><span class="brand-icon">✳</span><span>form<span class="brand-dot">.</span></span></a><span>Shared preview</span><a href="./index.html">Create your own ↗</a></header><iframe id="sharedFrame" title="Shared website preview" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe></section>
+</body>
+</html>

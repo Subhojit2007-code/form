@@ -1,0 +1,35 @@
+{
+  "appName": "form.",
+  "workspace": {
+    "name": "Studio workspace",
+    "plan": "Free"
+  },
+  "home": {
+    "eyebrow": "YOUR CREATIVE WORKSPACE",
+    "heading": "What will you make today?",
+    "subtitle": "One brief. A world of possibilities.",
+    "promptPlaceholder": "Describe the website you want to create…"
+  },
+  "suggestions": [
+    "A landing page for a boutique architecture studio",
+    "A cozy pixel-art game about restoring a lighthouse",
+    "A cinematic product launch video for a new fragrance"
+  ],
+  "starterProjects": [
+    { "name": "Untitled website", "category": "website", "accent": "violet" },
+    { "name": "Habit tracker app", "category": "app", "accent": "orange" },
+    { "name": "Little planet game", "category": "game", "accent": "blue" }
+  ],
+  "admin": {
+    "heading": "Admin console",
+    "description": "Usage and generation activity for this browser session.",
+    "emptyState": "Your generation history will appear here.",
+    "notice": "This sample admin panel is not protected by authentication and does not store data. Add authorization and a database before using it for real accounts."
+  },
+  "accessibility": {
+    "previewTitle": "Generated website preview",
+    "promptLabel": "Describe what you want to create",
+    "shareButtonLabel": "Copy share link",
+    "downloadButtonLabel": "Download generated output"
+  }
+}
